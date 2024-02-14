@@ -13,12 +13,13 @@ public class HelloServlet extends HttpServlet {
         System.out.println("Serveur initialisé.");
     }
 
-    public void service(HttpServletRequest request, HttpServletResponse reponse) throws IOException, ServletException {
+    public void service(HttpServletRequest request, HttpServletResponse response) throws IOException, ServletException {
+        response.setContentType("text/html");
         System.out.println("redirection GET / POST");
         if (isPost(request))
-            doPost(request, reponse);
+            doPost(request, response);
         else
-            doGet(request, reponse);
+            doGet(request, response);
     }
 
     public void doGet(HttpServletRequest request, HttpServletResponse response) throws IOException {
@@ -41,7 +42,6 @@ public class HelloServlet extends HttpServlet {
         int col = Integer.parseInt(request.getParameter("col"));
 
         if (lignes < 0 || lignes > 10 || col < 0 || col > 10) {
-            response.setContentType("text/html");
             PrintWriter out = response.getWriter();
             out.println("<html><body>");
             out.println("<h1>" + "Erreur: lignes et colonnes invalides" + "</h1>");
@@ -53,7 +53,7 @@ public class HelloServlet extends HttpServlet {
             try {
                 disp.forward(request, response);
             } catch (ServletException e) {
-
+                System.out.println("Erreur sur la page de damier.");
             }
         }
 
