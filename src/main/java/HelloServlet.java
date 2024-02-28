@@ -17,6 +17,7 @@ public class HelloServlet extends HttpServlet {
         System.out.println("le serveur passe bien par le service");
         doPost(request, reponse);
     }
+
     public void doGet(HttpServletRequest request, HttpServletResponse response) throws IOException {
         response.setContentType("text/html");
         PrintWriter out = response.getWriter();
@@ -25,22 +26,18 @@ public class HelloServlet extends HttpServlet {
         out.println("</body></html>");
     }
 
-    public void doPost(HttpServletRequest request, HttpServletResponse response) throws IOException 
-    {
-        String col = (String)request.getParameter("c");
-        String lin = (String)request.getParameter("l");
+    public void doPost(HttpServletRequest request, HttpServletResponse response) throws IOException {
+        String col = (String) request.getParameter("c");
+        String lin = (String) request.getParameter("l");
         request.setAttribute("col", col);
         request.setAttribute("lin", lin);
         RequestDispatcher disp = request.getRequestDispatcher("damier.jsp");
-        try
-        {
+        try {
             disp.forward(request, response);
-        }
-        catch (ServletException e)
-        {
+        } catch (ServletException e) {
             throw new RuntimeException(e);
         }
-        //response.sendRedirect("index.jsp");
+        // response.sendRedirect("index.jsp");
     }
 
     public void destroy() {
