@@ -4,6 +4,6 @@ table {
     height: 500px;
 }
 
-.couleur {
+.noir {
     background-color: white;
 }
