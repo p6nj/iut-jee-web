@@ -1,7 +1,10 @@
-import javax.servlet.*;
-import javax.servlet.http.*;
-import javax.servlet.annotation.*;
 import java.io.IOException;
+import jakarta.servlet.ServletException;
+import jakarta.servlet.RequestDispatcher;
+import jakarta.servlet.annotation.WebServlet;
+import jakarta.servlet.http.HttpServlet;
+import jakarta.servlet.http.HttpServletRequest;
+import jakarta.servlet.http.HttpServletResponse;
 
 @WebServlet(name = "ServletClient", value = "/ServletClient")
 public class ServletClient extends HttpServlet {
