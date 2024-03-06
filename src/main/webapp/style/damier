@@ -1,7 +1,15 @@
 table {
-    border: 1px solid black;
+    border: 1px solid white;
     width: 500px;
     height: 500px;
+}
+
+a {
+    color: aqua;
+}
+
+a:active {
+    color: aquamarine;
 }
 
 .noir {

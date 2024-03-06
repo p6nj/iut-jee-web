@@ -1,10 +1,11 @@
-<%@ include file="header.jsp" %>
+<%@ include file="head.jsp"%>
     <title>Accueil</title>
-    </head>
+</head>
 
-    <body>
-            <h1>Accueil</h1>
-            <p>Bienvenue. <br> Cliquez sur un des liens ci-dessous pour continuer :</p>
-            <%@ include file="navigation.jsp" %>
-
-            <%@ include file="footer.jsp" %>
+<body>
+<%@ include file="navigation.jsp"%>
+<main>
+    <h1>Page d'accueil</h1>
+    <p>Le TP jee</p>
+</main>
+<%@ include file="footer.jsp"%>
