@@ -1,4 +1,3 @@
-<%@ page import="com.example.appga.Client" %>
 <%@ page import="java.util.ArrayList" %>
 <%@ page import="java.util.ListIterator" %>
 <%@ include file="head.jsp"%>
