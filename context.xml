@@ -1,0 +1,2 @@
+<Host name="localhost"  appBase="/var/lib/tomcat10/webapps/testing/iut-jee-web/target/"
+                  unpackWARs="true" autoDeploy="true">

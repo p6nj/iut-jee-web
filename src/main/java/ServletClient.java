@@ -1,4 +1,6 @@
 import java.io.IOException;
+
+import client.Client;
 import jakarta.servlet.ServletException;
 import jakarta.servlet.RequestDispatcher;
 import jakarta.servlet.annotation.WebServlet;
